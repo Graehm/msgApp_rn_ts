@@ -6,8 +6,9 @@ const convex = new ConvexReactClient(process.env.EXPO_PUBLIC_CONVEX_URL!, {
 })
 
 export default function RootLayoutNav() {
-  return 
+  return (
     <ConvexProvider client={convex}>
       <Stack></Stack>
     </ConvexProvider>
+  );
 }

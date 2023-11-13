@@ -3,6 +3,7 @@ import React from 'react'
 import { useQuery } from 'convex/react'
 import { api } from '../convex/_generated/api'
 
+// automatic and realtime connection to Convex
 const Page = () => {
     const groups = useQuery(api.groups.get) || []
 
