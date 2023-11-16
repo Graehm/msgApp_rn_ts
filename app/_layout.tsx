@@ -32,8 +32,7 @@ export default function RootLayoutNav() {
             )
           }}
         />
-        {/* create modal routing here for when a user clicks the create a new chat icon. 
-        it grabs the path of create new chat form line 38 */}
+        {/* create modal routing here for when a user clicks the create a new chat icon. it grabs the path of create new chat form line 38 */}
           <Stack.Screen 
             name="(modal)/create"
             options={{
@@ -48,6 +47,7 @@ export default function RootLayoutNav() {
               )
             }}
           />
+          <Stack.Screen name="(chat)/[chatid]" options={{ headerTitle: 'Test' }} />
       </Stack>
     </ConvexProvider>
   );
