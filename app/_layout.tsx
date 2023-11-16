@@ -1,5 +1,8 @@
-import { Stack } from 'expo-router'
+import { Link, Stack } from 'expo-router'
 import { ConvexProvider, ConvexReactClient } from 'convex/react'
+import React from 'react'
+import { TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'
 
 const convex = new ConvexReactClient(process.env.EXPO_PUBLIC_CONVEX_URL!, {
   unsavedChangesWarning: false,
@@ -8,7 +11,27 @@ const convex = new ConvexReactClient(process.env.EXPO_PUBLIC_CONVEX_URL!, {
 export default function RootLayoutNav() {
   return (
     <ConvexProvider client={convex}>
-      <Stack></Stack>
+      <Stack 
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#EEA217',
+        },
+        headerTintColor: '#fff',
+      }}>
+        <Stack.Screen 
+          name="index"
+          options={{
+            headerTitle: 'My Chats',
+            headerRight: () => (
+              <Link href={'/'} asChild>
+                <TouchableOpacity>
+                  <Ionicons name="add" size={32} color="white" />
+                </TouchableOpacity>
+              </Link>
+            )
+          }}
+        />
+      </Stack>
     </ConvexProvider>
   );
 }
