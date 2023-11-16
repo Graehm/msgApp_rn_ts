@@ -41,7 +41,7 @@ export default function RootLayoutNav() {
               headerLeft: () => (
                 <Link href={'./'} asChild>
                   <TouchableOpacity>
-                    <Ionicons name="close-outline" size={32} color="White" />
+                    <Ionicons name="close-outline" size={32} color="white" />
                   </TouchableOpacity>
                 </Link>
               )
