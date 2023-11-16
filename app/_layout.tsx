@@ -23,7 +23,7 @@ export default function RootLayoutNav() {
           options={{
             headerTitle: 'My Chats',
             headerRight: () => (
-              <Link href={'/'} asChild>
+              <Link href={'/(modal)/create'} asChild>
                 <TouchableOpacity>
                   <Ionicons name="add" size={32} color="white" />
                 </TouchableOpacity>
