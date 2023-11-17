@@ -4,6 +4,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
+// comes from convex react package to access database from .env
 const convex = new ConvexReactClient(process.env.EXPO_PUBLIC_CONVEX_URL!, {
 	unsavedChangesWarning: false
 });
@@ -19,6 +20,7 @@ export default function RootLayoutNav() {
 					headerTintColor: '#fff'
 				}}
 			>
+				{/* main page layout with my chat index using asChild */}
 				<Stack.Screen
 					name="index"
 					options={{
@@ -32,6 +34,7 @@ export default function RootLayoutNav() {
 						)
 					}}
 				/>
+				{/* modal pop up for start a new chat */}
 				<Stack.Screen
 					name="(modal)/create"
 					options={{
