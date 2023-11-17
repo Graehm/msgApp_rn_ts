@@ -9,6 +9,7 @@ const convex = new ConvexReactClient(process.env.EXPO_PUBLIC_CONVEX_URL!, {
 	unsavedChangesWarning: false
 });
 
+// stack page of all pagesin app
 export default function RootLayoutNav() {
 	return (
 		<ConvexProvider client={convex}>
@@ -20,7 +21,7 @@ export default function RootLayoutNav() {
 					headerTintColor: '#fff'
 				}}
 			>
-				{/* main page layout with my chat index using asChild */}
+				{/* is the routing to the main page layout with my chat index using asChild */}
 				<Stack.Screen
 					name="index"
 					options={{
@@ -34,7 +35,7 @@ export default function RootLayoutNav() {
 						)
 					}}
 				/>
-				{/* modal pop up for start a new chat */}
+				{/* is the routing to the modal pop up for start a new chat */}
 				<Stack.Screen
 					name="(modal)/create"
 					options={{
@@ -49,7 +50,7 @@ export default function RootLayoutNav() {
 						)
 					}}
 				/>
-				<Stack.Screen name="(chat)/[chatid]" options={{ headerTitle: '' }} />
+				{/* <Stack.Screen name="(chat)/[chatid]" options={{ headerTitle: '' }} /> */}
 			</Stack>
 		</ConvexProvider>
 	);
