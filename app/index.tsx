@@ -4,6 +4,7 @@ import { useQuery } from 'convex/react'
 import { api } from '../convex/_generated/api'
 
 // automatic and realtime connection to Convex
+// acts as the index.js and access groups/ts and other files via query data
 const Page = () => {
     const groups = useQuery(api.groups.get) || []
 
