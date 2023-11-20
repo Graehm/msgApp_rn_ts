@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import React from 'react'
 import { useQuery } from 'convex/react'
 import { api } from '../convex/_generated/api'
@@ -10,7 +10,7 @@ const Page = () => {
 
     return (
         <View style={{flex: 1}}>
-            <ScrollView>
+            <ScrollView style={styles.container}>
                 {groups.map((group) => (
                     <View key={group._id}>
                         <Text>{group.name}</Text>
@@ -20,5 +20,14 @@ const Page = () => {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: { 
+        flex: 1,
+        padding: 1, 
+        backgroundColor: '#F8F5EA'
+    },
+})
+
 
 export default Page
