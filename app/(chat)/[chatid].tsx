@@ -6,7 +6,7 @@ const Page = () => {
     const { id } = useLocalSearchParams()
     return (
         <View>
-            <Text>Yo!</Text>
+            <Text>If you see this then it is working</Text>
         </View>
     )
 }
