@@ -4,7 +4,7 @@ import { useLocalSearchParams } from 'expo-router'
 
 const Page = () => {
     const { chatid } = useLocalSearchParams()
-    // console.log('~file: [chatid].tsx:7 ~ Page ~ id:', chatid)
+    // console.log('file: [chatid].tsx:7 ~ Page ~ id:', chatid)
     return (
         <View>
             <Text>Chat Page is in the House</Text>
