@@ -48,7 +48,11 @@ export default function RootLayoutNav() {
 									<Ionicons name="close-outline" size={32} color="white" />
 								</TouchableOpacity>
 							</Link>
-						)
+						),
+						// testing if its simple styling error
+						contentStyle: {
+							padding: 30
+						}
 					}}
 				/>
 				<Stack.Screen name="(chat)/[chatid]" options={{ headerTitle: 'TEST' }} />
