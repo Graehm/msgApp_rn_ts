@@ -40,6 +40,7 @@ export default function RootLayoutNav() {
 					name="(modal)/create"
 					options={{
 						headerTitle: 'Start a Chat',
+						// specifically makes modal
 						presentation: 'modal',
 						headerLeft: () => (
 							<Link href={'/'} asChild>
@@ -50,7 +51,7 @@ export default function RootLayoutNav() {
 						)
 					}}
 				/>
-				<Stack.Screen name="(chat)/[chatid]" options={{ headerTitle: 'TESTED' }} />
+				<Stack.Screen name="(chat)/[chatid]" options={{ headerTitle: 'TEST' }} />
 			</Stack>
 		</ConvexProvider>
 	);
