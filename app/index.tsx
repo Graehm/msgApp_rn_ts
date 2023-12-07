@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useQuery } from 'convex/react'
 import { api } from '../convex/_generated/api'
