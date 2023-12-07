@@ -36,19 +36,16 @@ const styles = StyleSheet.create({
     },
     group: {
         flexDirection: 'row',
-        gap: 10, 
+        gap: 10,
         alignItems: 'center',
         backgroundColor: '#fff',
         padding: 10,
-        borderRadius: 10, 
-        margin: 10, 
+        borderRadius: 10,
+        margin: 10,
         shadowColor: '#000',
-        elevation: {
-            width: 0, 
-            height: 1,
-        }, 
-        shadowOpacity: 0.22, 
-        shadowRadius: 2.22
+        elevation: 1,  // Fixed this line
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
     }
 })
 
