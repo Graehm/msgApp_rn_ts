@@ -8,8 +8,8 @@ const Page = () => {
     const [name, setName] = useState('')
     const [desc, setDesc] = useState('')
     const [icon, setIcon] = useState('')
-    const startGroup = useMutation(api.groups.create)
     const router = useRouter()
+    const startGroup = useMutation(api.groups.create)
 //create a new group in the convex mutation 
     const onCreateGroup = async () => {
         await startGroup({
@@ -18,14 +18,41 @@ const Page = () => {
             icon_url: icon
         })
         router.back()
+
+
     }
     return (
-        <KeyboardAvoidingView>
-            <Text>Yo!</Text>
+        <KeyboardAvoidingView style={styles.container}>
+            <Text style={styles.label}>Yo!</Text>
+            <TextInput style={styles.textInput} value={name} onChangeText={setName}></TextInput>
+           
+            <Text style={styles.label}>Yo!</Text>
+            <TextInput style={styles.textInput} value={name} onChangeText={setName}></TextInput>
+
+            <Text style={styles.label}>Yo!</Text>
+            <TextInput style={styles.textInput} value={name} onChangeText={setName}></TextInput>
         </KeyboardAvoidingView>
     )
 }
 
+const styles = StyleSheet.create ({
+    container: {
+        flex:1, 
+        backgroundColor: '#F8F5EA',
+        padding: 10, 
+    },
+    label: {
+        marginVertical: 10,
+    },
+    textInput: {
+        borderWidth: 1, 
+        borderColor: 'gray',
+        borderRadius: 5,
+        paddingHorizontal: 10, 
+        minHeight: 40, 
+        backgroundColor: '#fff'
+    }
+})
 export default Page
 
 
