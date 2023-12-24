@@ -23,14 +23,14 @@ const Page = () => {
     }
     return (
         <KeyboardAvoidingView style={styles.container}>
-            <Text style={styles.label}>Yo!</Text>
+            <Text style={styles.label}>Name</Text>
             <TextInput style={styles.textInput} value={name} onChangeText={setName}></TextInput>
            
-            <Text style={styles.label}>Yo!</Text>
-            <TextInput style={styles.textInput} value={name} onChangeText={setName}></TextInput>
+            <Text style={styles.label}>Desccription</Text>
+            <TextInput style={styles.textInput} value={desc} onChangeText={setDesc}></TextInput>
 
-            <Text style={styles.label}>Yo!</Text>
-            <TextInput style={styles.textInput} value={name} onChangeText={setName}></TextInput>
+            <Text style={styles.label}>Icon URL</Text>
+            <TextInput style={styles.textInput} value={icon} onChangeText={setIcon}></TextInput>
         </KeyboardAvoidingView>
     )
 }
